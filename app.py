@@ -31,7 +31,7 @@ st.write('**** 증상을 입력하세요. 심장병 진단을 내려드립니다
 a = st.number_input(' 나이 입력 ', value= 0)      #초기값은 0
 b = st.number_input(' 성별 입력 (여자 = 0, 남자 = 1) ', value= 0 )     # 초기값은 0
 c = st.number_input(' 가슴 통증 유무 ( 유 = 0, 무 = 1) ', value= 0 )     # 초기값은 0
-d = st.number_input(' 안정시 혈압 수치 ', value=0.0)      #초기값은 0.0
+d = st.number_input(' 안정시 혈압 수치 ', value=0)      #초기값은 0
 e = st.number_input(' 최대 심박수 ', value=0 )     # 초기값은 0
 
 
@@ -39,6 +39,6 @@ if st.button(' 결과 확인하기 '):            # 사용자가 '결과 확인'
         input_data = [[a,b,c,d,e]]     # 사용자가 입력한 a,b,c,d,e 를 input_data에 저장하고
         p = model.predict(input_data)         # model이 예측한 값을 p에 저장한다
         if p[0] == 1 :
-              st.success('심장병일 가능성이 높습니다. 병원에 방문해주세요')
-        else:
               st.success('심장병일 가능성이 낮습니다. 하지만 통증이 계속된다면 병원에 방문해주세요.')
+        else:
+              st.success('심장병일 가능성이 높습니다. 병원에 방문해주세요')
