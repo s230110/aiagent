@@ -38,7 +38,7 @@ e = st.number_input(' 최대 심박수 ', value=0 )     # 초기값은 0
 if st.button(' 결과 확인하기 '):            # 사용자가 '결과 확인' 버튼을 누르면
         input_data = [[a,b,c,d,e]]     # 사용자가 입력한 a,b,c,d,e 를 input_data에 저장하고
         p = model.predict(input_data)         # model이 예측한 값을 p에 저장한다
-            if p[0] == 1 :
+        if p[0] == 1 :
               st.success('심장병일 가능성이 높습니다. 병원에 방문해주세요')
-            else:
+        else:
               st.success('심장병일 가능성이 낮습니다. 하지만 통증이 계속된다면 병원에 방문해주세요.')
