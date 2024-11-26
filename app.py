@@ -27,6 +27,7 @@ with col3:
 # 4. 모델 활용
 st.subheader('모델 활용')
 st.write('**** 증상을 입력하세요. 심장병 진단을 내려드립니다.')
+st.write('**** 수집된 데이터는 목적 외 이용되지 않습니다.')
 
 a = st.number_input(' 나이 입력 ', value= 0)      #초기값은 0
 b = st.number_input(' 성별 입력 (여자 = 0, 남자 = 1) ', value= 0 )     # 초기값은 0
